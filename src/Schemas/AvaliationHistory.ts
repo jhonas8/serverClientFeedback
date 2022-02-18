@@ -1,8 +1,8 @@
 import { Schema, model } from 'mongoose'
 
 const now = new Date()
-const minutes = now.getUTCMinutes().toString.length === 1 ? '0'+now.getUTCMinutes() : now.getUTCMinutes()
-const hours = (now.getUTCHours()-3).toString.length === 1 ? '0'+now.getUTCHours() : now.getUTCHours()
+const minutes = now.getUTCMinutes().toString().length === 1 ? '0'+now.getUTCMinutes() : now.getUTCMinutes()
+const hours = (now.getUTCHours()-3).toString().length === 1 ? '0'+(now.getUTCHours()-3): (now.getUTCHours()-3)
 
 const historySchema =  new Schema({
     feedbackRate: {

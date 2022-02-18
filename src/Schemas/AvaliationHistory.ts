@@ -18,7 +18,7 @@ const historySchema =  new Schema({
     },
     hour: {
         type: String,
-        default: `${now.getUTCHours()+3}:${minutes}`
+        default: `${now.getUTCHours()-3}:${minutes}`
     },
     fromMonth: {
         type: Number,

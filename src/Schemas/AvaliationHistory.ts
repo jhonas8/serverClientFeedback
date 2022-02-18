@@ -1,6 +1,7 @@
 import { Schema, model } from 'mongoose'
 
 const now = new Date()
+const minutes = now.getUTCMinutes().toString.length === 1 ? '0'+now.getUTCMinutes() : now.getUTCMinutes()
 
 const historySchema =  new Schema({
     feedbackRate: {
@@ -13,11 +14,11 @@ const historySchema =  new Schema({
     },
     date: {
         type: String,
-        default: `${now.getDate()}/${now.getMonth()+1}/${now.getFullYear()}`
+        default: `${now.getUTCDate()}/${now.getUTCMonth()+1}/${now.getUTCFullYear()}`
     },
     hour: {
         type: String,
-        default: `${now.getHours()}:${now.getMinutes()}`
+        default: `${now.getUTCHours()+3}:${minutes}`
     },
     fromMonth: {
         type: Number,

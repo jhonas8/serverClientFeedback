@@ -19,7 +19,7 @@ export default class Score {
 
         this.scoreCoefficients = [
             {value: 157.5, name: 'bad'},
-            {value: 257.5, name: 'suggested'},
+            {value: 262.5, name: 'suggested'},
             {value: 350, name: 'great'},
             {value: 481.25, name: 'exceptional'},
         ]

@@ -6,7 +6,12 @@
   "proxy": "http://localhost:8001/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon --watch src/ --exec ts-node src/app.ts -e ts"
+    "dev": "nodemon --watch src/ --exec ts-node src/app.ts -e ts",
+    "start": "node dist/app.js",
+    "postinstall": "tsc",
+    "watch-node": "nodemon dist/app.js",
+    "watch-ts": "tsc -w",
+    "deploy": "git add . && git commit -m Heroku && git push heroku master"
   },
   "keywords": [],
   "author": "",
@@ -24,5 +29,8 @@
     "dotenv": "^16.0.0",
     "express": "^4.17.2",
     "mongoose": "^6.2.0"
+  },
+  "engines": {
+    "node":"16.13.2"
   }
 }
